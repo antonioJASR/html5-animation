@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>Formulas</h1>
+
+  <h2>
+    Trigonometric functions
+  </h2>
+
+  <pre>
+    sine of angle = opposite / hypotenuse
+    cosine of angle = adjacent / hypotenuse
+    tangent of angle = opposite / adjacent
+  </pre>
+
+  <h2>
+    Convert radians to degrees and degrees to radians
+  </h2>
+
+  <pre>
+    radians = degrees * Math.PI / 180
+    degrees = radians * 180 / Math.PI
+  </pre>
+
+  <h2>
+    Rotate to the mouse
+  </h2>
+
+  <pre>
+    dx = mouse.x - object.x
+    dy = mouse.y - object.y
+    object.rotation = Math.atan2(dy, dx) * 180 / Math.PI
+  </pre>
+
+  <h2>
+    Create Waves
+  </h2>
+
+  <pre>
+    value = center + Math.sin(angle) * range
+    angle += speed
+  </pre>
+
+  <h2>
+    Create circles
+  </h2>
+
+  <pre>
+    xposition = centerX + Math.cos(angle) * radius
+    yposition = centerY + Math.sin(angle) * radius
+  </pre>
+
+  <h2>
+    Get the distance between two points
+  </h2>
+
+  <pre>
+    dx = x2 - x1
+    dy = y2 - y1
+    dist = Math.sqrt(dx * dy + dy * dy)
+  </pre>
+</body>
+
+</html>
