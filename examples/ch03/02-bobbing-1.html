@@ -28,20 +28,21 @@
     const context = canvas.getContext('2d');
     const ball = new Ball();
 
+    const centerY = 200;
+    const centerX = canvas.width / 2;
     let angle = 0;
-    let centerY = 200;
     let range  = 50;
-    let speed = 0.05;
-
-    ball.x = canvas.width / 2;
+    let yspeed = 0.05;
+    let xspeed = 1;
 
     function drawFrame() {
       window.requestAnimationFrame(drawFrame, canvas);
       context.clearRect(0, 0, canvas.width, canvas.height);
 
+      ball.x = centerX + Math.sin(angle / 2) * range;
       // sin magic!!!
       ball.y = centerY  + Math.sin(angle) * range;
-      angle += 0.1;
+      angle += yspeed;
       ball.draw(context);
     }
 
