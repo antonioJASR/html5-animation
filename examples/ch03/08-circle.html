@@ -28,21 +28,20 @@
     const context = canvas.getContext('2d');
     const ball = new Ball();
 
-    const centerY = 200;
+    const centerY = canvas.height / 2;
     const centerX = canvas.width / 2;
+    const speed = 0.05;
+    const radius = 30
+
     let angle = 0;
-    let range  = 50;
-    let yspeed = 0.05;
-    let xspeed = 1;
 
     function drawFrame() {
       window.requestAnimationFrame(drawFrame, canvas);
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      ball.x = centerX + Math.sin(angle / 4) * range;
-      // sin magic!!!
-      ball.y = centerY  + Math.sin(angle) * range;
-      angle += yspeed;
+      ball.x = centerX + Math.cos(angle) * radius; // increase radius here to get an oval
+      ball.y = centerY + Math.sin(angle) * radius;
+      angle += speed;
       ball.draw(context);
     }
 
