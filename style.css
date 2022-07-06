@@ -2,6 +2,44 @@ html, body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+  --background: #f6f6f6;
+  --color: #333;
+  --code-background: white;
+  --link-color: cornflowerblue;
+  --link-visited-color: mediumslateblue;
+}
+
 canvas {
   border: 1px solid black;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+
+body {
+  color: var(--color);
+  background-color: var(--background);
+}
+
+pre {
+  background-color: var(--code-background);
+  padding: 5px;
+  font-size: large;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #333;
+    --color: #f6f6f6;
+    --code-background: black;
+    --link-color: cornflowerblue;
+    --link-visited-color: mediumslateblue;
+  }
 }
